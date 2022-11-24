@@ -147,6 +147,16 @@ public class HelperBase {
         }
     }
 
+    public void swipeToElementWithText(String parentContDesc, String elementText) {
+        try {
+            String elementClassName = "android.widget.TextView";
+    driver.findElement(MobileBy.AndroidUIAutomator(
+                    "new UiScrollable(new UiSelector().description(\"" + parentContDesc + "\")).getChildByText("
+                            + "new UiSelector().className(\"" + elementClassName + "\"), \"" + elementText + "\")"));
+        } catch (Exception e) {
+            System.out.println("Cannot scroll further");
+        }
+    }
     public enum Direction {
         UP,
         DOWN,

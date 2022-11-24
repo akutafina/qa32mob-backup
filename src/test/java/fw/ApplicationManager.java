@@ -71,4 +71,7 @@ public class ApplicationManager {
         driver.quit();
     }
 
+    public void openDeepLink(String path) {
+        driver.get("mydemoapprn://" + path);
+    }
 }

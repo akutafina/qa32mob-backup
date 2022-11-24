@@ -16,4 +16,10 @@ public class ShoppingCartTest extends TestBase{
         //app.getShopCartHelper();
         //Assert.assertEquals(app.getShopCartHelper().getCardsAmount(),1, "Amount of items cards shown in the shopping cart: 1.");
     }
+
+    @Test
+    public void scrollToItemDemo(){
+        app.getProductsContainerHelper().waitForLoad();
+        app.getProductsContainerHelper().scrollToItemName("Sauce Labs Bolt T-Shirt");
+    }
 }

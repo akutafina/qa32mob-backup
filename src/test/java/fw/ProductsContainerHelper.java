@@ -21,4 +21,9 @@ public class ProductsContainerHelper extends HelperBase {
         waitUntilElementIsClickable(By.xpath(ITEM_CARD_XPATH.replace("$idx", idx.toString())));
         tap(By.xpath(ITEM_CARD_XPATH.replace("$idx", idx.toString())));
     }
+
+    public void scrollToItemName(String productTitle) {
+        swipeToElementWithText("store item", productTitle);
+        System.out.println("Text of the elem:"+ getTextOfTheElement(By.xpath(ITEM_CARDS_XPATH)));
+    }
 }

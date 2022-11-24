@@ -21,6 +21,7 @@ public class LoginScreenHelper extends HelperBase {
         typeAndTapEnter(By.xpath(PWD_INPUT_FIELD_XPATH), pwd);
 //        hideKeyboard();
         tap(By.xpath(LOGIN_BTN_XPATH));
+    }
 
     }
 
